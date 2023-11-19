@@ -4,6 +4,9 @@ public class StringInverter
 {
     public string InvertString(string inputString)
     {
-        return "!dlroW ,olleH";
+        var charArray = inputString.ToCharArray();
+        Array.Reverse(charArray);
+
+        return new string(charArray);
     }
 }

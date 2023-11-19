@@ -3,10 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace UnitTestsNoFramework.Tests;
 
-public class StringInverterTests
+public class StringInverter_Tests
 {
     // 1. Enkel strängmanipulation
+
     // Uppgift: Implementera en metod InvertString som tar en sträng som input och returnerar dess inverterade version.
+    
     // Tester: Testa denna metod i Main-metod där du manuellt testar metoden med minst tre olika strängar och skriver ut resultatet samt förväntat resultat.
 
     public static bool InvertString_WhenGivenString_ReturnsReverseString()
@@ -40,5 +42,39 @@ public class StringInverterTests
                           $"Input: {inputString}\n" +
                           $"Expected Result: {expectedResult}\n" +
                           $"Result: {result}\n");
+    }
+
+    public static bool InvertString_WhenGivenASecondString_ReturnsReverseString()
+    {
+        // Arrange
+        var inputString = "Hejsanhoppsan världen!";
+        var expectedResult = "!nedlräv nasppohnasjeH";
+
+        var sut = new StringInverter();
+
+        // Act
+        var result = sut.InvertString(inputString);
+
+        // Assert
+        DisplayTestResults(MethodBase.GetCurrentMethod().Name, inputString, expectedResult, result);
+
+        return result == expectedResult;
+    }
+
+    public static bool InvertString_WhenGivenEmptyString_ReturnsEmptyString()
+    {
+        // Arrange
+        var inputString = "";
+        var expectedResult = "";
+
+        var sut = new StringInverter();
+
+        // Act
+        var result = sut.InvertString(inputString);
+
+        // Assert
+        DisplayTestResults(MethodBase.GetCurrentMethod().Name, inputString, expectedResult, result);
+
+        return result == expectedResult;
     }
 }
