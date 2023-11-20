@@ -9,16 +9,16 @@ public class Calculator
 
     public decimal Subtract(decimal a, decimal b)
     {
-        return a-b;
+        return a - b;
     }
 
     public decimal Multiply(decimal a, decimal b)
     {
-        throw new NotImplementedException();
+        return a * b;
     }
 
     public decimal Divide(decimal a, decimal b)
     {
-        throw new NotImplementedException();
+        return a / b;
     }
 }

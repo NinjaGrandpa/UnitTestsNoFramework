@@ -1,4 +1,5 @@
-﻿using UnitTestsNoFramework.Tests;
+﻿using UnitTestsNoFramework;
+using UnitTestsNoFramework.Tests;
 
 #region Övning 1
 
@@ -33,7 +34,21 @@ Calculator_Tests.Calculator_Subtract_ReturnFourPointFour_FromEightPointEightAndF
 Calculator_Tests.Calculator_Subtract_ReturnNegativeTen_FromNegativeFiveAndFive();
 
 // Calculator_Multiply
-Calculator_Tests
+Calculator_Tests.Calculator_Multiply_ReturnsEight_FromFourAndTwo();
+Calculator_Tests.Calculator_Multiply_ReturnsZero_FromFiveAndZero();
+Calculator_Tests.Calculator_Multiply_ReturnsMinusTwentyFour_FromSixAndNegativeFour();
+
+// Calculator_Divide
+Calculator_Tests.Calculator_Divide_ReturnThirtyTwo_FromSixtyFourAndTwo();
+Calculator_Tests.Calculator_Divide_ReturnFifty_FromTwentyFiveAndPointFive();
+
+#endregion
+
+#region Övning 3
+
+Console.WriteLine("\nÖvning 3:\n");
+
+ArraySorter_Tests.ArraySorter_SortArray_ReturnsSortedArray_FromArrayOfLengthFive();
 
 #endregion
 

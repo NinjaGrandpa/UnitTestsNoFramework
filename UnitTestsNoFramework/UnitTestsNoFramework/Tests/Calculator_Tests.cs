@@ -65,7 +65,6 @@ public class Calculator_Tests
 
     #endregion
 
-
     #region Calculator_Subtract
 
     public static void Calculator_Subtract_ReturnsTwo_FromThreeAndOne()
@@ -82,7 +81,7 @@ public class Calculator_Tests
 
         // Assert
         var result = output == expectedOutput;
-        DisplayTestResults(a,b,expectedOutput,output,result);
+        DisplayTestResults(a, b, expectedOutput, output, result);
     }
 
     public static void Calculator_Subtract_ReturnFourPointFour_FromEightPointEightAndFourPointFour()
@@ -99,7 +98,7 @@ public class Calculator_Tests
 
         // Assert
         var result = output == expectedOutput;
-        DisplayTestResults(a,b,expectedOutput,output,result);
+        DisplayTestResults(a, b, expectedOutput, output, result);
     }
 
     public static void Calculator_Subtract_ReturnNegativeTen_FromNegativeFiveAndFive()
@@ -116,14 +115,104 @@ public class Calculator_Tests
 
         // Assert
         var result = output == expectedOutput;
-        DisplayTestResults(a,b,expectedOutput, output, result);
+        DisplayTestResults(a, b, expectedOutput, output, result);
     }
 
     #endregion
 
     #region Calculator_Multiply
 
-    public static void Calculator_Multiply
+    public static void Calculator_Multiply_ReturnsEight_FromFourAndTwo()
+    {
+        // Arrange
+        var a = 4m;
+        var b = 2m;
+        var expectedOutput = 8m;
+
+        var sut = new Calculator();
+
+        // Act
+        var output = sut.Multiply(a, b);
+
+        // Assert
+        var result = output == expectedOutput;
+        DisplayTestResults(a, b, expectedOutput, output, result);
+
+    }
+
+    public static void Calculator_Multiply_ReturnsZero_FromFiveAndZero()
+    {
+        // Arrange
+        var a = 5m;
+        var b = 0m;
+        var expectedOutput = 0m;
+
+        var sut = new Calculator();
+
+        // Act
+        var output = sut.Multiply(a, b);
+
+        // Assert
+        var result = output == expectedOutput;
+        DisplayTestResults(a, b, expectedOutput, output, result);
+    }
+
+    public static void Calculator_Multiply_ReturnsMinusTwentyFour_FromSixAndNegativeFour()
+    {
+        // Arrange
+        var a = 6m;
+        var b = -4m;
+        var expectedOutput = -24m;
+
+        var sut = new Calculator();
+
+        // Act
+        var output = sut.Multiply(a, b);
+
+        // Assert
+        var result = output == expectedOutput;
+        DisplayTestResults(a, b, expectedOutput, output, result);
+    }
+
+    #endregion
+
+    #region Calculator_Divide
+
+    public static void Calculator_Divide_ReturnThirtyTwo_FromSixtyFourAndTwo()
+    {
+        // Arrange
+        var a = 64m;
+        var b = 2m;
+        var expectedOutput = 32m;
+
+        var sut = new Calculator();
+
+        // Act
+        var output = sut.Divide(a, b);
+
+        // Assert
+        var result = output == expectedOutput;
+        DisplayTestResults(a, b, expectedOutput, output, result);
+
+    }
+
+    public static void Calculator_Divide_ReturnFifty_FromTwentyFiveAndPointFive()
+    {
+        // Arrange
+        var a = 25m;
+        var b = 0.5m;
+        var expectedOutput = 50m;
+
+        var sut = new Calculator();
+
+        // Act
+        var output = sut.Divide(a, b);
+
+        // Assert
+        var result = output == expectedOutput;
+        DisplayTestResults(a, b, expectedOutput, output, result);
+
+    }
 
     #endregion
 }
