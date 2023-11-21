@@ -7,7 +7,7 @@ public class Calculator_Tests
         Console.WriteLine($"Input: {inputA}, {inputB}\n" +
                           $"Expected Output: {expectedOutput}\n" +
                           $"Output: {output}\n" +
-                          "Test Result: " + (result ? "Passed" : "Failed") + "\n");
+                          "TestResult Result: " + (result ? "Passed" : "Failed") + "\n");
     }
 
     #region Calculator_Add

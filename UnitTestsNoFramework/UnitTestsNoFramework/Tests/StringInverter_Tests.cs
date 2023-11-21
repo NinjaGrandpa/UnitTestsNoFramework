@@ -38,7 +38,7 @@ public class StringInverter_Tests
 
     private static void DisplayTestResults(string testName, string inputString, string expectedResult, string result)
     {
-        Console.WriteLine($"Test Name: {testName}\n\n" +
+        Console.WriteLine($"TestResult Name: {testName}\n\n" +
                           $"Input: {inputString}\n" +
                           $"Expected Result: {expectedResult}\n" +
                           $"Result: {result}\n");
